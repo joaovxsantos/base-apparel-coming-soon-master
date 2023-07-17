@@ -141,7 +141,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
   .left-input h1,
   .left-input h2,
   .left-input h3 {
@@ -174,7 +174,7 @@
   }
 
   .form {
-    width: 250px;
+    width: 280px;
   }
 
   .form input {
