@@ -27,9 +27,14 @@
   justify-content: space-around;
   flex-direction: column;
 }
-.left img {
+[src="./images/logo.svg"] {
   width: 180px;
 }
+
+[src="./images/hero-mobile.jpg"] {
+  display: none;
+}
+
 .left-input h1 {
   color: var(--Desaturated-Red);
   font-weight: 100;
@@ -192,5 +197,100 @@
     width: 10px;
     height: 10px;
     left: calc(100% - 90px);
+  }
+}
+
+@media screen and (max-width: 482px) {
+  [src="./images/logo.svg"] {
+    margin: 10px 0 0 20px;
+  }
+
+  [src="./images/hero-desktop.jpg"] {
+    display: none;
+  }
+
+  .container {
+    padding: 50px 0px;
+  }
+
+  .container .left {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+
+  [src="./images/hero-mobile.jpg"] {
+    display: block;
+    width: 100vw;
+    height: 200px;
+    margin: 20px 0 20px 0;
+  }
+
+  .left-input h1,
+  .left-input h2,
+  .left-input h3 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .left-input {
+    margin: auto;
+  }
+
+  .left-input p {
+    color: var(--Desaturated-Red);
+    width: 80vw;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .form {
+    width: 350px;
+    max-width: 90vw;
+    margin: auto;
+  }
+
+  .form input {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .form .bg {
+    width: 80px;
+    height: 40px;
+    margin-left: -50px;
+  }
+
+  .form .bg img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .form #error {
+    width: 10px;
+    height: 10px;
+    left: calc(100% - 90px);
+  }
+
+  .left-input label {
+    margin: 0 0 20px 20px;
+    display: block;
+    text-align: start;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 130px 0;
+  }
+
+  .left-input h1,
+  .left-input h2,
+  .left-input h3 {
+    font-size: 40px;
   }
 }
