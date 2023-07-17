@@ -18,18 +18,18 @@
   height: 100vh;
   display: flex;
 }
+
+.container .left {
+  width: 55%;
+  height: 90%;
+  padding: 0px 140px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
 .left img {
   width: 180px;
 }
-.container .left {
-  width: 60%;
-  height: 80%;
-  padding: 0px 140px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-}
-
 .left-input h1 {
   color: var(--Desaturated-Red);
   font-weight: 100;
@@ -51,25 +51,42 @@
   width: 500px;
   line-height: 30px;
   font-size: 20px;
-  margin: 30px 0 30px 0;
+  margin: 30px 0 40px 0;
 }
 .form {
   display: flex;
+  position: relative;
 }
 .form input {
   outline: none;
   border: 1px solid hsla(0, 6%, 24%, 0.2);
   width: 500px;
-  height: 45px;
+  height: 55px;
   padding: 0px 15px;
   border-radius: 20px;
   margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--Dark-Grayish-Red);
+}
+
+.form input::placeholder {
+  color: var(--Desaturated-Red);
+  opacity: 0.6;
+}
+
+.form #error {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
 }
 
 .form .bg {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   width: 90px;
-  height: 45px;
+  height: 55px;
   border-radius: 25px;
   margin-left: -80px;
   cursor: pointer;
@@ -89,16 +106,19 @@
   color: var(--Soft-Red);
   font-size: 14px;
 }
-.left-input label.off {
+.left-input label.off,
+.form #error.off {
   opacity: 0;
 }
 
-.left-input label.active {
+.left-input label.active,
+.form #error.active {
   opacity: 1;
 }
 
 .left ~ img {
-  width: 40%;
+  width: 45%;
+  height: 100vh;
 }
 
 /* em telas menores por .left height 100% e space evenly*/
