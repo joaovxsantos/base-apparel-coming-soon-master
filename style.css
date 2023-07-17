@@ -56,11 +56,12 @@
 .form {
   display: flex;
   position: relative;
+  width: 500px;
 }
 .form input {
   outline: none;
   border: 1px solid hsla(0, 6%, 24%, 0.2);
-  width: 500px;
+  width: 100%;
   height: 55px;
   padding: 0px 15px;
   border-radius: 20px;
@@ -79,8 +80,8 @@
   height: 20px;
   position: absolute;
   top: 40%;
-  left: 50%;
-  transform: translate(-50%, -40%);
+  left: calc(100% - 105px);
+  transform: translate(-100%, -40%);
 }
 
 .form .bg {
@@ -88,9 +89,10 @@
   width: 90px;
   height: 55px;
   border-radius: 25px;
-  margin-left: -80px;
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: -1px;
 }
 .form .bg img {
   width: 15px;
@@ -121,4 +123,74 @@
   height: 100vh;
 }
 
-/* em telas menores por .left height 100% e space evenly*/
+@media screen and (max-width: 1366px) {
+  .container .left {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+  .left-input h1,
+  .left-input h2,
+  .left-input h3 {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .left-input h1,
+  .left-input h2,
+  .left-input h3 {
+    font-size: 50px;
+  }
+
+  .left-input p {
+    color: var(--Desaturated-Red);
+    width: 350px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container .left {
+    padding: 0px 100px;
+    height: 80%;
+  }
+
+  .left-input h1,
+  .left-input h2,
+  .left-input h3 {
+    font-size: 30px;
+  }
+
+  .left-input p {
+    color: var(--Desaturated-Red);
+    width: 280px;
+    font-size: 14px;
+  }
+
+  .form {
+    width: 250px;
+  }
+
+  .form input {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .form .bg {
+    width: 80px;
+    height: 40px;
+    margin-left: -50px;
+  }
+
+  .form .bg img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .form #error {
+    width: 10px;
+    height: 10px;
+    left: calc(100% - 90px);
+  }
+}
