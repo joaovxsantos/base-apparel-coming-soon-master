@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --Font-size: 16px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.left img {
+  width: 180px;
+}
+.container .left {
+  width: 60%;
+  height: 80%;
+  padding: 0px 140px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.left-input h1 {
+  color: var(--Desaturated-Red);
+  font-weight: 100;
+}
+
+.left-input h2,
+.left-input h3 {
+  color: var(--Dark-Grayish-Red);
+}
+
+.left-input h1,
+.left-input h2,
+.left-input h3 {
+  font-size: 90px;
+}
+
+.left-input p {
+  color: var(--Desaturated-Red);
+  width: 500px;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 30px 0 30px 0;
+}
+.form {
+  display: flex;
+}
+.form input {
+  outline: none;
+  border: 1px solid hsla(0, 6%, 24%, 0.2);
+  width: 500px;
+  height: 45px;
+  padding: 0px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.form .bg {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 90px;
+  height: 45px;
+  border-radius: 25px;
+  margin-left: -80px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.form .bg img {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left-input label {
+  margin-left: 25px;
+  color: var(--Soft-Red);
+  font-size: 14px;
+}
+.left-input label.off {
+  opacity: 0;
+}
+
+.left-input label.active {
+  opacity: 1;
+}
+
+.left ~ img {
+  width: 40%;
+}
+
+/* em telas menores por .left height 100% e space evenly*/
