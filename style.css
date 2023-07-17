@@ -26,6 +26,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  background: url(./images/bg-pattern-desktop.svg);
 }
 [src="./images/logo.svg"] {
   width: 180px;
